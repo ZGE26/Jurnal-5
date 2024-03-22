@@ -26,11 +26,17 @@ public class ProgramQueue<E> {
     }
         // output queue contents
     public void printQueue() {
-        Iterator<E> iterator = queue.iterator();
-        System.out.println("Daftar Tugas: ");
-        while (iterator.hasNext()) {
-            Object value = iterator.next();
-            System.out.println("    Tugas " + " " +value + " ");
+        if (queue.isEmpty()) {
+            System.out.println();
+            System.out.println("Tidak ada tugas yang tersedia");
+            System.out.println();
+        } else {
+            Iterator<E> iterator = queue.iterator();
+            System.out.println("Daftar Tugas: ");
+            while (iterator.hasNext()) {
+                Object value = iterator.next();
+                System.out.println("    Tugas " + " " +value + " ");
+            }
         }
     }
 }
