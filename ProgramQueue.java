@@ -7,19 +7,30 @@ public class ProgramQueue<E> {
         queue = new LinkedList<E>();
     }   
 
-    public void enqueue(E data) {
-        queue.add(data);
-        System.out.println("Data " + data + " telah ditambahkan");
+    public void enqueue(E object) {
+        queue.add(object);
+        System.out.println();
+        System.out.println("Tugas " + object + " telah ditambahkan");
+        System.out.println();
     }
-
+        // remove object from queue
     public E dequeue() throws NoSuchElementException {
+        System.out.println();
+        System.out.println("Data " + queue.element() + " telah selesai dikerjakan");
+        System.out.println();
         return queue.remove();
     }
-
-    public void viewQueue() {
-        System.out.println("Queue: ");
-        for (E value : queue) {
-            System.out.println(value);
+        // determine if queue is empty
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
+        // output queue contents
+    public void printQueue() {
+        Iterator<E> iterator = queue.iterator();
+        System.out.println("Daftar Tugas: ");
+        while (iterator.hasNext()) {
+            Object value = iterator.next();
+            System.out.println("    Tugas " + " " +value + " ");
         }
     }
 }
