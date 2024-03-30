@@ -54,8 +54,13 @@ public class JurnalNo01 {
 
     public static void main(String[] args) {
         String infixExpression = "a+b*(c^d-e)^(f+g*h)-i";
+        String infixExpression2 = "a+b*c";
+        System.out.println("Infix: " + infixExpression2);
+        String postfixExpression2 = infixToPostfix(infixExpression2);
+        System.out.println("Postfix: " + postfixExpression2);
         System.out.println("Infix: " + infixExpression);
         String postfixExpression = infixToPostfix(infixExpression);
         System.out.println("Postfix: " + postfixExpression);
+
     }
 }
